@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Left-Sidebar */
+.menu__content{
+    background-color: rgb(250, 250, 250);
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: rgb(222, 222, 222);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10;
+    position: absolute;
+    bottom: 9rem;
+    padding: 15px;
+    height: 100vh;
+}
+
+
+.menu__content ul li{
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+.menu__content ul li img{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu__content ul{
+    padding-left: 0;
+}
+/*  /Left-Sidebar */ 
+
+/* Icons. Fahoots_Courses_Folders */
+.kahoots_courses_folders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 5rem;
+    margin-top: 1.5rem;
+}
+
+.kahoots_courses_folders span{
+    font-size: 11px;
+    font-weight: 650;
+    margin: 0px 0px  10px 0px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.kahoots_courses_folders span:hover{
+    color: rgb(70, 23, 143);
+    background-color: #f2f2f2;
+}
+
+.kahoots_courses_folders span.kahoots_icon{
+    color: rgb(70, 23, 143);
+    background-color: #f2f2f2;
+}
+
+p.p_AccessPass{
+    font-size: 12px;
+    font-weight: 650;
+    background-color: #b78d00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* /Icons. Kahoots_Courses_Folders */

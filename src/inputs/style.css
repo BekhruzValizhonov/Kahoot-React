@@ -1,0 +1,87 @@
+.addAnswers{
+    display: flex;
+    justify-content: center;
+}
+
+.addAnswers input {
+    padding: 20px ;
+    width: 30%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 15%) 0px -4px 0px 0px inset;
+    margin-bottom: 10px;
+}
+
+.question{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.question input{
+    width: 70%; 
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 15%) 0px -4px 0px 0px inset;
+}
+
+.kahoot_gif{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.addAnswers > .addAnswer_radio{
+    width: 2rem;
+    height: 2rem;
+    box-shadow: none;
+    margin: 0px 20px 0px 0px;
+}
+
+
+/* Quiz-Side-Bar */
+.time_limit{
+    position: absolute;
+    top: 15rem;
+    left: 1rem;
+}
+
+.time_limit select{
+    padding: 5px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 15%) 0px -4px 0px 0px inset;
+}
+
+.add_question_btn{
+    position: absolute;
+    top: 17.5rem;  
+    left: 1rem;
+}
+
+.title{
+    position: absolute;
+    top: 11.5rem;  
+    left: 1rem;
+}
+
+.title input{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 15%) 0px -4px 0px 0px inset;
+}
+
+.none{
+    display: none;
+}
+
+/* /Quiz-Side-Bar */

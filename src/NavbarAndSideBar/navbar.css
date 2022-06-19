@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat+Alternates&display=swap');
+
+* {
+
+  font-family: 'Montserrat Alternates', sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px;
+  color: rgb(255, 255, 255);
+  padding: 0px 4rem;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.navbar .logoKahoot { 
+  width: 50px;
+  padding: 0px 10px 0px;
+}
+
+
+.navbar .navbarRight {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  margin: 0px 20px ;
+}
+
+.navbarLeft{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  margin: 0px 20px 0px 30px;
+  /* margin-left: 1.5rem; */
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbarRight span {
+  margin: 0px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.navbar .navbarLeft span {
+  margin: 0px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.navbar .navbarRight span * {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  color: #333333;
+  font-weight: bold;
+}
+.navbar .navbarRight span div {
+  font-size: 13px;
+}
+.navbar .navbarRight span:hover * {
+  color: rgb(70, 23, 143);
+}
+.navbar .navbarRight span:target {
+  color: rgb(70, 23, 143);
+}
+.navbar .btnCreate {
+  background-color: rgb(19, 104, 206);
+  color: #fff;
+  border: none;
+  padding: 10px 16px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgb(18, 22, 27) 0px 4px 6px -2px;
+}
+.navbar .btnCreate:hover {
+  opacity: 0.8;
+}
+
+.navbar .btnCreate:active {
+  box-shadow: none;
+  opacity: 1;
+}
+
+/* Quiz-Navbar */
+span.quiz_navabr_save_span{
+  background: rgb(255, 255, 255);
+  color: rgb(70, 23, 143);
+  padding: 10px 16px 8px;
+  border-radius: 5px;
+}
+
+/* /Quiz-Navbar */
