@@ -56,95 +56,99 @@ function GameFunc(props) {
   });
 
   return (
-    <>
+    <div className="respondent">
       <h5 className="time_limit">{time}</h5>
 
-      <div className="answers_page">
-        <div className="input_answer_section">
-          <div className="first_answer">
-            <img
-              src={triangle}
-              alt="404"
-              width={60}
-              height={60}
-              name="answerImg"
-              style={{ borderRadius: "5px" }}
-            />
+      <div className="first_answer">
+        <img
+          src={triangle}
+          className="triangle"
+          alt="404"
+          width={60}
+          height={60}
+          name="answerImg"
+          style={{ borderRadius: "5px" }}
+        />
 
-            <label htmlFor="firstAnswer">{props.kahoot.addAnswer1}</label>
-            <input
-              style={{ display: "none" }}
-              type="radio"
-              id="firstAnswer"
-              name="isAnswer"
-              value={1}
-              onClick={handleClick}
-            />
-            <img
-              src={rom}
-              alt="404"
-              width={60}
-              height={60}
-              style={{ borderRadius: "5px" }}
-            />
+        <label htmlFor="firstAnswer">{props.kahoot.addAnswer1}</label>
+        <input
+          style={{ display: "none" }}
+          type="radio"
+          id="firstAnswer"
+          name="isAnswer"
+          value={1}
+          onClick={handleClick}
+        />
 
-            <label style={{ backgroundColor: "blue" }} htmlFor="secondAnswer">
-              {props.kahoot.addAnswer2}
-            </label>
-            <input
-              style={{ display: "none" }}
-              type="radio"
-              id="secondAnswer"
-              name="isAnswer"
-              value={2}
-              onClick={handleClick}
-            />
-          </div>
+        <div>
+          <img
+            src={rom}
+            className="rom"
+            alt="404"
+            width={60}
+            height={60}
+            style={{ borderRadius: "5px" }}
+          />
 
-          <div className="second_answer">
-            <img
-              src={circle}
-              alt="404"
-              width={60}
-              height={60}
-              style={{ borderRadius: "5px" }}
-            />
-
-            <label style={{ backgroundColor: "yellow" }} htmlFor="thirdAnswer">
-              {props.kahoot.addAnswer3}
-            </label>
-            <input
-              style={{ display: "none" }}
-              type="radio"
-              id="thirdAnswer"
-              name="isAnswer"
-              value={3}
-              onClick={handleClick}
-            />
-
-            <img
-              src={square}
-              alt="404"
-              width={60}
-              height={60}
-              style={{ borderRadius: "5px" }}
-            />
-
-            <label style={{ backgroundColor: "green" }} htmlFor="fourthAnswer">
-              {props.kahoot.addAnswer4}
-            </label>
-            <input
-              style={{ display: "none" }}
-              type="radio"
-              id="fourthAnswer"
-              name="isAnswer"
-              value={4}
-              onClick={handleClick}
-            />
-          </div>
+          <label style={{ backgroundColor: "blue" }} htmlFor="secondAnswer">
+            {props.kahoot.addAnswer2}
+          </label>
+          <input
+            style={{ display: "none" }}
+            type="radio"
+            id="secondAnswer"
+            name="isAnswer"
+            value={2}
+            onClick={handleClick}
+          />
         </div>
       </div>
-    </>
+
+      <div className="second_answer">
+        <img
+          src={circle}
+          className="circle"
+          alt="404"
+          width={60}
+          height={60}
+          style={{ borderRadius: "5px" }}
+        />
+
+        <label style={{ backgroundColor: "yellow" }} htmlFor="thirdAnswer">
+          {props.kahoot.addAnswer3}
+        </label>
+        <input
+          style={{ display: "none" }}
+          type="radio"
+          id="thirdAnswer"
+          name="isAnswer"
+          value={3}
+          onClick={handleClick}
+        />
+        <div>
+          <img
+            src={square}
+            className="square"
+            alt="404"
+            width={60}
+            height={60}
+            style={{ borderRadius: "5px" }}
+          />
+
+          <label style={{ backgroundColor: "green" }} htmlFor="fourthAnswer">
+            {props.kahoot.addAnswer4}
+          </label>
+          <input
+            style={{ display: "none" }}
+            type="radio"
+            id="fourthAnswer"
+            name="isAnswer"
+            value={4}
+            onClick={handleClick}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
