@@ -50,6 +50,7 @@ function GameFunc(props) {
           increment: answer,
         })
       );
+      dispatch(falseAnswers(answer));
       navigate("/congurulationPage", { state: { answerState: false } });
     }
     return () => clearInterval(interal);

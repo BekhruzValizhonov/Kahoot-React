@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   createNewQuestions,
+  endOfQuestions,
   increaseId,
   subtractionQuestion,
 } from "../redux/reducers/kahootReducer";
@@ -24,6 +25,7 @@ function CongurulationPage() {
         kahootReducer.plyaGameObj.allQuestions.length
       ) {
         dispatch(subtractionQuestion(1));
+        dispatch(endOfQuestions());
       }
     }, 3000);
   }, []);

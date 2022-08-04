@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Options from "../inputs/Options";
 import { saveToLibary } from "../redux/reducers/kahootReducer";
 import AddQuestionBtn from "../MyButton/AddQuestionBtn";
@@ -8,6 +8,7 @@ import Question from "../inputs/Question";
 import AddAnswer from "../inputs/AddAnswer";
 import AddAnswer2 from "../inputs/AddAnswer2";
 import QuizNavbar from "../NavbarAndSideBar/QuizNavbar";
+import { useEffect } from "react";
 
 let lastId = 1;
 let questionsArray = [];
@@ -19,6 +20,7 @@ function Quiz() {
   });
   const [title, setTitle] = useState("");
   const [isSubmitTitle, setIsSubmitTitle] = useState(true);
+  let kahootReducer = useSelector((state) => state.kahootReducer);
   let dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -42,6 +44,12 @@ function Quiz() {
     dispatch(saveToLibary({ questionsArray: questionsArray, title: title }));
     questionsArray = [];
   };
+
+  useEffect(() => {
+    if (kahootReducer.isEndOfQuestions) {
+      window.location.reload();
+    }
+  }, []);
 
   return (
     <div className="quiz">

@@ -12,6 +12,7 @@ export const quizSlice = createSlice({
     trueAnswers: 0,
     questionNumber: 1,
     createNewQuestionsIncrement: 0,
+    isEndOfQuestions: false,
   },
   reducers: {
     saveToLibary: (state, action) => {
@@ -50,6 +51,10 @@ export const quizSlice = createSlice({
     createNewQuestions: (state, action) => {
       state.createNewQuestionsIncrement += action.payload;
     },
+
+    endOfQuestions: (state) => {
+      state.isEndOfQuestions = true;
+    },
   },
 });
 
@@ -62,5 +67,6 @@ export const {
   addQuestion,
   subtractionQuestion,
   createNewQuestions,
+  endOfQuestions,
 } = quizSlice.actions;
 export default quizSlice.reducer;
