@@ -22,7 +22,7 @@ function CongurulationPage() {
 
       if (
         kahootReducer.questionNumber >
-        kahootReducer.plyaGameObj.allQuestions.length
+        kahootReducer.playGameObj.allQuestions.length
       ) {
         dispatch(subtractionQuestion(1));
         dispatch(endOfQuestions());

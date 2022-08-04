@@ -106,7 +106,9 @@ button a.none_save{
 
 h5.game_question{
   top: 1rem;
-  left: 35rem;
+  left: 0rem;
+  right: 0;
+  width: 90%;
   margin: auto;
   position: absolute;
   background: rgb(231, 231, 231);

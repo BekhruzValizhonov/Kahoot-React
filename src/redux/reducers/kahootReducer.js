@@ -6,7 +6,7 @@ export const quizSlice = createSlice({
   name: "ALL_QUIZ",
   initialState: {
     kahoots: [],
-    plyaGameObj: {},
+    playGameObj: {},
     gameId: 1,
     falseAnswers: 0,
     trueAnswers: 0,
@@ -25,7 +25,7 @@ export const quizSlice = createSlice({
 
     playGame: (state, action) => {
       let kahoot = state.kahoots.find((v) => v.id === action.payload.libraryId);
-      state.plyaGameObj = kahoot;
+      state.playGameObj = kahoot;
     },
 
     increaseId: (state) => {

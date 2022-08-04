@@ -18,12 +18,12 @@ function Game() {
 
       <div className="show_game">
         {kahootReducer.createNewQuestionsIncrement ===
-          kahootReducer.plyaGameObj.allQuestions.length && (
+          kahootReducer.playGameObj.allQuestions.length && (
           <button className="create_new_questions">
             <Link to="/">Create New Questions</Link>
           </button>
         )}
-        {kahootReducer.plyaGameObj.allQuestions.map((kahoot) => {
+        {kahootReducer.playGameObj.allQuestions.map((kahoot) => {
           return (
             <div key={uniqid()}>
               {kahoot.id === kahootReducer.gameId && (
@@ -41,7 +41,7 @@ function Game() {
           <h5>False Answers {kahootReducer.falseAnswers}</h5>
           <h5>
             Questions:{kahootReducer.questionNumber}/
-            {kahootReducer.plyaGameObj.allQuestions.length}
+            {kahootReducer.playGameObj.allQuestions.length}
           </h5>
         </div>
       </div>
