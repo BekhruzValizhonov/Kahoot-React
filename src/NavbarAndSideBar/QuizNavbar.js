@@ -8,10 +8,9 @@ import StarsIcon from "@mui/icons-material/Stars";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import TocIcon from "@mui/icons-material/Toc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const QuizNavbar = (props) => {
-  let navigate = useNavigate();
   return (
     <div>
       {/* Navbar */}

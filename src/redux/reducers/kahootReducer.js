@@ -6,11 +6,12 @@ export const quizSlice = createSlice({
   name: "ALL_QUIZ",
   initialState: {
     kahoots: [],
-    plyaGameArr: {},
+    plyaGameObj: {},
     gameId: 1,
     falseAnswers: 0,
     trueAnswers: 0,
     questionNumber: 1,
+    createNewQuestionsIncrement: 0,
   },
   reducers: {
     saveToLibary: (state, action) => {
@@ -23,10 +24,10 @@ export const quizSlice = createSlice({
 
     playGame: (state, action) => {
       let kahoot = state.kahoots.find((v) => v.id === action.payload.libraryId);
-      state.plyaGameArr = kahoot;
+      state.plyaGameObj = kahoot;
     },
 
-    increaseId: (state, action) => {
+    increaseId: (state) => {
       state.gameId += 1;
     },
 
@@ -45,6 +46,10 @@ export const quizSlice = createSlice({
     subtractionQuestion: (state, action) => {
       state.questionNumber -= action.payload;
     },
+
+    createNewQuestions: (state, action) => {
+      state.createNewQuestionsIncrement += action.payload;
+    },
   },
 });
 
@@ -56,5 +61,6 @@ export const {
   falseAnswers,
   addQuestion,
   subtractionQuestion,
+  createNewQuestions,
 } = quizSlice.actions;
 export default quizSlice.reducer;

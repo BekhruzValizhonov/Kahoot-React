@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import uniqid from "uniqid";
 import GameFunc from "./GameFunc";
 
@@ -16,13 +17,20 @@ function Game() {
       />
 
       <div className="show_game">
-        {kahootReducer.plyaGameArr.allQuestions.map((kahoot) => {
+        {kahootReducer.createNewQuestionsIncrement ===
+          kahootReducer.plyaGameObj.allQuestions.length && (
+          <button className="create_new_questions">
+            <Link to="/">Create New Questions</Link>
+          </button>
+        )}
+        {kahootReducer.plyaGameObj.allQuestions.map((kahoot) => {
           return (
             <div key={uniqid()}>
-              <h5 className="game_question">{kahoot.question}</h5>
-
               {kahoot.id === kahootReducer.gameId && (
-                <GameFunc kahoot={kahoot} />
+                <>
+                  <h5 className="game_question">{kahoot.question}</h5>
+                  <GameFunc kahoot={kahoot} />
+                </>
               )}
             </div>
           );
@@ -33,7 +41,7 @@ function Game() {
           <h5>False Answers {kahootReducer.falseAnswers}</h5>
           <h5>
             Questions:{kahootReducer.questionNumber}/
-            {kahootReducer.plyaGameArr.allQuestions.length}
+            {kahootReducer.plyaGameObj.allQuestions.length}
           </h5>
         </div>
       </div>

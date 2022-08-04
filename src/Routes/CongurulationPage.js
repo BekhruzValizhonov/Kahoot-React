@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
+  createNewQuestions,
   increaseId,
   subtractionQuestion,
 } from "../redux/reducers/kahootReducer";
@@ -11,16 +12,16 @@ function CongurulationPage() {
   let dispatch = useDispatch();
   let location = useLocation();
   let navigate = useNavigate();
-  console.log(location.state);
 
   useEffect(() => {
     setTimeout(() => {
       dispatch(increaseId());
+      dispatch(createNewQuestions(1));
       navigate("/gamePage");
 
       if (
         kahootReducer.questionNumber >
-        kahootReducer.plyaGameArr.allQuestions.length
+        kahootReducer.plyaGameObj.allQuestions.length
       ) {
         dispatch(subtractionQuestion(1));
       }
